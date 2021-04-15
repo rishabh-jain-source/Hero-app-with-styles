@@ -1,0 +1,17 @@
+.box-style{
+    border:1px solid lightgray;
+    margin-top: 1.8rem;
+    border-radius: 0.15rem;
+}
+.edit-title{
+    text-decoration: none;
+    background-color: blue;
+    height: 4.4rem;
+    opacity: .6;
+    color: white;
+    padding: 1.2rem;
+    margin: 0;
+}
+.form{
+    padding: 1.8rem;
+}

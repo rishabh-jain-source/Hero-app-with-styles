@@ -1,0 +1,36 @@
+/* .navbar{
+    background: black;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    text-decoration: none;
+} */
+.my-navbar-brand{
+    /* text-decoration: none;
+    margin-left:30px;
+    font-weight: lighter;
+    font-style: italic;
+    color: white;
+    transition-duration: 0.45s;
+    font-size: 24px;
+    padding-top:1.2rem;
+    padding-bottom:1.2rem;
+    padding-left: none; */
+
+    
+}
+.my-navbar-brand:hover{
+    border-left: 2px solid blue;
+    border-right: 2px solid blue;
+}
+
+.navbar-brand-image{
+    height: 30px;
+    width: 30px; 
+    padding: 1.2rem;
+    padding-right: 0rem;
+}
+.my-custom{
+    background-color: black;
+    color:blue;
+}
