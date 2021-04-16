@@ -14,6 +14,7 @@ import store from './store/configStore'
 import HeroList from './Components/HeroList';
 import { ConnectedEdit } from './Components/edit'
 import AddHero from './Components/AddHero';
+import About from './Components/About'
 import 'bootstrap/dist/css/bootstrap.min.css';
  
 store.dispatch(addHero({ id: '20', name: 'Tornado' }))
@@ -31,12 +32,14 @@ const MyRoutes=()=>(
   <BrowserRouter>
     <Header/>
     <Switch>
-    <Route path='/' component={Dashboard} exact={true}/>
+    <Route path='/' component={ConnectedHeroes} exact={true}/>
       
-      <Route path='/heroes' component={ConnectedHeroes} exact={true}/>
-      <Route path='/heroes/:id' component={ConnectedHeroes} exact={true}></Route>
-      <Route path='/edit/:id' component={ConnectedEdit} exact={true}></Route>
-      <Route path='/addHero' component={AddHero}/>
+      <Route path='/heroes' component={ConnectedHeroes} />
+      <Route path='/heroes/:id' component={ConnectedHeroes} ></Route>
+      <Route path='/addHero' component={AddHero} exact={true}/>
+      <Route path='/edit/addHero' component={AddHero} exact={true}></Route>
+      <Route path='/edit/:id' component={ConnectedEdit} ></Route>
+      <Route path='/about' component={About}></Route>
       <Route component={NoFound} ></Route>
     </Switch>
    

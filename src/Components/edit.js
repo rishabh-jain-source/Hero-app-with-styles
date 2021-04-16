@@ -8,6 +8,10 @@ import Container from 'react-bootstrap/Container'
 import { Col, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import './../style/box-style.css'
+import InnerHeader from '../Components/InnerHeader'
+import { Card, CardGroup } from 'react-bootstrap'
+import '../style/custom-button.css'
+import SideMenu from './SideMenu'
 
 //let history = useHistory();
 class Edit extends React.Component {
@@ -58,9 +62,11 @@ class Edit extends React.Component {
                 <Container>
         <Row>
             <Col sm={3}>
-                <NavLink to='/heroes' >Heroes</NavLink>
+            <SideMenu/>
                 </Col>
-                <Col sm={9}>
+                        <Col sm={9}>
+                            <InnerHeader />
+                            <CardGroup style={{ width: '600px', marginTop: '1.2rem' }}>
                 <div className="box-style">
                 <h3 className="edit-title">{this.state.name ? `${this.state.name.toUpperCase()}` : ''}</h3>
                 {this.state.error && <p>{this.state.error}</p>}
@@ -73,11 +79,16 @@ class Edit extends React.Component {
                     <Form.Label>Name</Form.Label>
                         <Form.Control type="text" placeholder='Name' value={this.state.name} onChange={this.nameChange}/>
                         </Form.Group>
-                                    <Button onClick={this.formSubmit} className="save-button">Save</Button>
+                                    </Form>
+                                    <Card.Footer>
+                                    <div style={{display:'flex'}}>
+                                    <button onClick={this.formSubmit} className="my-custom-button">Save</button>
                     
-                                    <Button onClick={this.cancel}>Cancel</Button>
-                                </Form>
-                </div>
+                                            <button onClick={this.cancel} className="my-custom-button">Cancel</button>
+                                            </div>
+                                        </Card.Footer>
+                                </div>
+                                </CardGroup>
                         </Col>
                     </Row>
                     </Container>

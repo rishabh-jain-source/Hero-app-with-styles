@@ -7,6 +7,9 @@ import {NavLink, Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import { Col, Row } from 'react-bootstrap'
 import Edit from './edit'
+import InnerHeader from './InnerHeader'
+import { CardGroup } from 'react-bootstrap'
+import SideMenu from './SideMenu'
 export const Heroes = (props) =>
     
 (
@@ -15,28 +18,23 @@ export const Heroes = (props) =>
     <Container>
         <Row>
             <Col sm={3}>
-                <NavLink to='/heroes' >Heroes</NavLink>
+                    
+                    <SideMenu/>
                 </Col>
                 <Col sm={9}>
-        <h1>Heroes</h1>
-        <table>
-            <tbody>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-            </tr>
+                <InnerHeader/>
             {
                 props.heroes.map((hero) => (   
                     <>
                         {/* <td>{hero.id}</td>
                         <td> <Link to={`/heroes/${hero.id}/${hero.name}`}>{hero.name}</Link></td> */}
-                        
-                        <ConnectedHeroList key={hero.id} hero={hero} />
+                        <CardGroup style={{width:'600px',marginTop:'1.2rem'}}>
+                            <ConnectedHeroList key={hero.id} hero={hero} />
+                        </CardGroup>
                     </>
                 ))
                 }
-                </tbody>
-        </table>
+               
         {/* {   <div>
             
             {props.match.params.id && <div><h3>{
@@ -48,7 +46,7 @@ export const Heroes = (props) =>
             
             </div>
         } */}
-                    <Link to="/addHero">Add Hero</Link>
+                    {/* <Link to="/addHero">Add Hero</Link> */}
                     </Col>
             </Row>
         </Container>

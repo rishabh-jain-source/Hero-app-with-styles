@@ -20,8 +20,8 @@
     
 }
 .my-navbar-brand:hover{
-    border-left: 2px solid blue;
-    border-right: 2px solid blue;
+    border-left: 2px solid rgba(0, 0, 255, 0.6);
+    border-right: 2px solid rgba(0, 0, 255, 0.6);
 }
 
 .navbar-brand-image{

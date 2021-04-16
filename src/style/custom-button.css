@@ -1,0 +1,14 @@
+.my-custom-button{
+    text-decoration: none !important;
+    width:300px;
+    border: none;
+    background-color: white;
+    text-align: center;
+    
+}
+.my-custom-button:hover{
+    color:blue !important;
+    opacity: 0.6;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
